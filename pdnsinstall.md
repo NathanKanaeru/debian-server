@@ -69,7 +69,7 @@ di tutorial sebelumnya saya sudah kasih tau bagaimana cara install openssh kan? 
    exit;
    ```
 
-7. Install dan Konfigurasi PowerDNS
+# Install dan Konfigurasi PowerDNS
    - Jalankan :
    ```
    apt install pdns-server pdns-backend-mysql -y
@@ -111,8 +111,8 @@ di tutorial sebelumnya saya sudah kasih tau bagaimana cara install openssh kan? 
      pdns_server --daemon=no --guardian=no --loglevel=9
      systemctl start pdns
      ```
-     
-8. Install admin panel
+
+# Install admin panel
    - Install dependency :
      ```
      apt install -y wget apache2 gettext libapache2-mod-php php php-common php-curl php-dev php-gd php-pear php-imap php-mysql php-xmlrpc php-intl
