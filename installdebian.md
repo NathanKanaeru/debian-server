@@ -91,7 +91,7 @@ Panduan langkah demi langkah untuk menginstal Debian di VirtualBox dengan pengat
      ping 192.168.100.2
      ```  
 
-## Catatan  
+[!NOTE]
 - Pastikan pengaturan jaringan sudah benar agar koneksi antara host dan VM berjalan dengan baik.  
 - SSH memungkinkan akses jarak jauh ke Debian, jadi pastikan port yang digunakan tidak bertabrakan dengan aplikasi lain.  
 
