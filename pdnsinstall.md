@@ -1,5 +1,7 @@
 # Bahasa
 
+Indonesia | [English](pdnsinstall.md) | [Jawa](pdnsinstall-jawa.md) | [Sunda](pdnsinstall-sunda.md)
+
 # Install PowerDNS dan PowerAdmin
 
 Halo kembali lagi dengan saya NathanKanaeru . Setelah tadi kalian sudah install [Debian](installdebian.md) di virtualbox , kini saya akan bagikan tutorial bagaimana cara install PowerDNS dan Admin panelnya . Simak tutorial selengkapnya!
