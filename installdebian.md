@@ -6,11 +6,11 @@ Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara instal
 
 ## Persyaratan  
 1. **VirtualBox**  
-   - Unduh dan instal VirtualBox dari [situs resmi](https://www.virtualbox.org/).  
+   - Unduh dan instal VirtualBox dari [situs resmi](https://www.virtualbox.org/). Skip jika udah install
 2. **Extension Pack**  
-   - Unduh dan tambahkan Extension Pack dari [halaman download VirtualBox](https://www.virtualbox.org/wiki/Downloads).  
+   - Unduh dan tambahkan Extension Pack dari [halaman download VirtualBox](https://www.virtualbox.org/wiki/Downloads). Jangan lupa diimport kalo udah didownload
 3. **Debian VM Image**  
-   - Unduh Debian VM Image dari [VMImage](https://www.osboxes.org/debian/).  
+   - Unduh Debian VM Image dari [VMImage](https://www.osboxes.org/debian/). Pilih yang minimum biar ga makan banyak storage (paling cuman 3gb an kalo yang minimum tuh)
 
 ## Langkah-Langkah  
 
@@ -110,4 +110,12 @@ Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara instal
 > - Pastikan pengaturan jaringan sudah benar agar koneksi antara host dan VM berjalan dengan baik.  
 > - SSH memungkinkan akses jarak jauh ke Debian, jadi pastikan port yang digunakan tidak bertabrakan dengan aplikasi lain.  
 
-Selamat mencoba!  
+
+## Pasreng Team
+[NathanKanaeru]() = BagasZkyn
+[AmbonBlckAndi]()
+[HastaAdh]()
+[Alip]()
+[Andhyka]()
+[PalWokk]()
+[M.Agung]()
