@@ -98,6 +98,12 @@ Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara instal
       ssh debian@192.168.100.1 -p 2222
       ```
       untuk `debian` adalah username dari debian tadi dan `192.168.100.1` adalah ip dari yang kita set di adapter tadi lalu `2008` adalah port SSH dari debian tadi yang sebelumnya juga udah kita set. sesuaikan saja sama yang kamu set biar tidak ada kendala
+   - Jika sudah maka jalankan :
+     ```
+     sudo su
+     apt update -y && apt upgrade -y
+     ```
+     dan dengan ini maka instalasi selesai dan bisa lanjut ke tutorial berikutnya
 
 
 > [!NOTE]
