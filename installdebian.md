@@ -2,7 +2,7 @@
 
 # Bahasa
 
-Indonesia | [English](bahasa/inggris.md) | [Jawa](Bahasa/jawa.md) | [Sunda](sunda.md)
+Indonesia | [English](installdebian-english.md) | [Jawa](installdebian-jawa.md) | [Sunda](installdebian-sunda.md)
 
 # Install Debian di VirtualBox  
 
