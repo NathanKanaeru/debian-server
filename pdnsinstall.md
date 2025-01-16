@@ -82,7 +82,8 @@ di tutorial sebelumnya saya sudah kasih tau bagaimana cara install openssh kan? 
    ```
    nano /etc/powerdns/pdns.d/pdns.local.gmysql.conf
    ```
-     - pastekan ini di file tsb(ganti password sesuai dengan password mu tadi
+
+  - pastekan ini di file tsb(ganti password sesuai dengan password mu tadi
        ```
        # MySQL Configuration
        # MySQL Configuration
