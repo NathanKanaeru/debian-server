@@ -174,4 +174,6 @@ Jika sudah bisa terakses maka akan muncul konfigurasi:
 - Step 7
 klik teks warna biru yaitu PowerAdmin
 Lalu nanti akan diarahkan untuk login . masukkan username nya admin dan passwordnya adalah password yang di set untuk poweradmin tadi. dan dengan ini maka konfigurasi telah selesai!
-  
+
+# About
+**Made with love by BagasZakyan**
