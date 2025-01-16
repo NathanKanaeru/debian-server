@@ -1,6 +1,6 @@
 # Bahasa
 
-# 
+# Install PowerDNS dan PowerAdmin
 
 Halo kembali lagi dengan saya NathanKanaeru . Setelah tadi kalian sudah install [Debian](installdebian.md) di virtualbox , kini saya akan bagikan tutorial bagaimana cara install PowerDNS dan Admin panelnya . Simak tutorial selengkapnya!
 
@@ -41,7 +41,7 @@ di tutorial sebelumnya saya sudah kasih tau bagaimana cara install openssh kan? 
    `Enter current password for root`
     - pada bagian ini langsung enter saja
    `Set root password?`
-    - klik Y lalu enter dan buat password kamu
+    - klik Y lalu enter dan buat password kamu misal `password`
    `Remove anonymous user?` Y
    `Disable root login remotely` Y
    `Remove test database and acces to it` Y
@@ -136,3 +136,44 @@ di tutorial sebelumnya saya sudah kasih tau bagaimana cara install openssh kan? 
      mv poweradmin-3.4.1 /var/www/html/poweradmin
      chown -R www-data:www-data /var/www/html/poweradmin/
      ```
+
+# Akses PowerAdmin
+
+Setelah kamu lakukan semua diatas seharusnya kamu bisa akses poweradmin dari browser. Caranya buka chrome atau browser apapun , lalu ketik `192.168.100.1/poweradmin/install` nah bagian ip nya itu sesuaikan dengan ip kamu yang sebelumnya kamu setting pada konfigurasi [virtualbox](debianinstall.md) sebelumnya.
+
+Jika sudah bisa terakses maka akan muncul konfigurasi:
+- Di step 1 pilih yang paling atas (bahasa inggris) lalu klik goto step 2
+- Di step 2 langsung klik to step 3
+
+- Di step 3 isi saja seperti ini
+  - kolom username isi dengan `root`
+  - password isi dengan password mariadb di awal tadi
+  - database type = mysql
+  - hostname `localhost`
+  - port `3306`
+  - kolom database isi `pdnsdb`
+  - DB Charset & DB Collation kosongin aja
+  - Poweradmin password ini isi dengan password yang kamu mau misalnya `pdnsadmin`
+  - Lalu klik goto step 4
+
+- Konfig step 4 seperti ini
+  - Username `root`
+  - Password `password` (isi password mariadb kamu tadi)
+  - Hostmaster `contoh.xyz` isi aja
+  - Primary Nameserver `ns1.contoh.com`
+  - Secondary Nameserver `ns2.contoh.com`
+  - lalu next ke step 5
+  - 
+- Step 5
+  Copy kode warna merah yang ditampilkan dan paste di mariadb (login mariadb dengan `mariadb -u root -p`)
+
+- Step 6
+  - Copy kode yang muncul dari bagian <?php sampe bawah
+  - masukkan perintah di debian `nano /var/www/html/poweradmin/inc/config.inc.php`
+  - Pastekan kode yang dicopy tadi lalu `CTRL + X` `Y` `ENTER`
+  - Lalu go ke step 7
+ 
+- Step 7
+klik teks warna biru yaitu PowerAdmin
+Lalu nanti akan diarahkan untuk login . masukkan username nya admin dan passwordnya adalah password yang di set untuk poweradmin tadi. dan dengan ini maka konfigurasi telah selesai!
+  
