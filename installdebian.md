@@ -107,7 +107,7 @@ Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara instal
      sudo su
      apt update -y && apt upgrade -y
      ```
-     dan dengan ini maka instalasi selesai dan bisa lanjut ke tutorial berikutnya
+     dan dengan ini maka instalasi selesai dan bisa lanjut ke tutorial berikutnya di [Powerdns Setup](pdnsinstall.md)
 
 
 > [!NOTE]
