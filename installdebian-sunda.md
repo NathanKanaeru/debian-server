@@ -2,7 +2,7 @@
 
 # Basa
 
-[Indonesia](installdebian.md) | [English](installdebian-english.md) | Sunda | [Jawa](installdebian-jawa.md)
+[Indonesia](installdebian.md) | [English](installdebian-english.md) | [Jawa](installdebian-jawa.md) | Sunda
 
 # Install Debian di VirtualBox  
 
@@ -115,6 +115,10 @@ Wilujeng sumping, abdi NathanKanaeru (Bagas sabenerna). Ieu tutorial kumaha cara
 
 # Léngkah Saterusna  
 Lamun sagala anu di luhur geus leres, ayeuna urang ngalih ka [Konfigurasi PowerDNS & Admin Panel](pdnsinstall.md). Klik kanggo tutorial lengkepna!  
+
+# Tukang nyieun
+
+dijieun kalayan cinta ku bagaszkyn
 
 ## Pasreng Team  
 - [BagasZkyn/NathanKanaeru]()  
