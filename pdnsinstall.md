@@ -39,9 +39,9 @@ di tutorial sebelumnya saya sudah kasih tau bagaimana cara install openssh kan? 
    ```
    Bakalan muncul benerapa pertanyaan:
    `Enter current password for root`
-    - pada bagian ini langsung enter saja
+   - pada bagian ini langsung enter saja
    `Set root password?`
-    - klik Y lalu enter dan buat password kamu misal `password`
+   - klik Y lalu enter dan buat password kamu misal `password`
    `Remove anonymous user?` Y
    `Disable root login remotely` Y
    `Remove test database and acces to it` Y
