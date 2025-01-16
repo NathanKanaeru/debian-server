@@ -10,7 +10,7 @@ Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara instal
 2. **Extension Pack**  
    - Unduh dan tambahkan Extension Pack dari [halaman download VirtualBox](https://www.virtualbox.org/wiki/Downloads). Jangan lupa diimport kalo udah didownload
 3. **Debian VM Image**  
-   - Unduh Debian VM Image dari [VMImage](https://www.osboxes.org/debian/). Pilih yang minimum biar ga makan banyak storage (paling cuman 3gb an kalo yang minimum tuh)
+   - Unduh Debian VM Image dari [VMImage](https://sourceforge.net/projects/linuxvmimages/files/VirtualBox/D/12/Debian_12.0.0_VBM.7z/download). Pilih yang minimum biar ga makan banyak storage (paling cuman 3gb an kalo yang minimum tuh)
 
 ## Langkah-Langkah  
 
@@ -21,8 +21,8 @@ Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara instal
 
 3. **Konfigurasi Jaringan di VirtualBox**  
    - Tambahkan Host-Only Adapter:  
-     - Buka **File > Host Network Manager** di VirtualBox.  
-     - Tambahkan **Host-Only Adapter** baru dan konfigurasikan IP sesuai kebutuhan.  
+     - Buka **Network** di VirtualBox.  
+     - Tambahkan **Host-Only Adapter** baru dan konfigurasikan IP sesuai kebutuhan misalnya 192.168.100.1
    - Buka pengaturan VM Debian:  
      - **Adapter 1:** Atur ke **NAT**.  
      - **Adapter 2:** Atur ke **Host-Only Adapter** yang telah ditambahkan sebelumnya.  
@@ -36,7 +36,7 @@ Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara instal
 5. **Masuk ke Root dan Update Sistem**  
    - Setelah login, masuk ke akun root dengan perintah:  
      ```bash
-     su
+     sudo su
      ```  
    - Update dan upgrade sistem:  
      ```bash
@@ -108,7 +108,8 @@ Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara instal
 
 > [!NOTE]
 > - Pastikan pengaturan jaringan sudah benar agar koneksi antara host dan VM berjalan dengan baik.  
-> - SSH memungkinkan akses jarak jauh ke Debian, jadi pastikan port yang digunakan tidak bertabrakan dengan aplikasi lain.  
+> - SSH memungkinkan akses jarak jauh ke Debian, jadi pastikan port yang digunakan tidak bertabrakan dengan aplikasi lain.
+> - Karena ini CLI bang [Kepleh]() pasti suka
 
 
 ## Pasreng Team
