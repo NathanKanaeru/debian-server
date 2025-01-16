@@ -112,10 +112,10 @@ Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara instal
 
 
 ## Pasreng Team
-[BagasZkyn/NathanKanaeru]() \n
-[AmbonBlckAndi]() \n
-[HastaAdh]() \n
-[Alip]() \n
-[Andhyka]() \n
-[PalWokk]() \n
-[M.Agung]() \n
+- [BagasZkyn/NathanKanaeru]()
+- [AmbonBlckAndi]()
+- [HastaAdh]()
+- [Alip]()
+- [Andhyka]()
+- [PalWokk]()
+- [M.Agung]()
