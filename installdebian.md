@@ -1,5 +1,9 @@
 ![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
 
+# Bahasa
+
+Indonesia | [English](bahasa/inggris.md) | [Jawa](Bahasa/jawa.md) | [Sunda](sunda.md)
+
 # Install Debian di VirtualBox  
 
 Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara install debian di virtualbox (CLI Only) . ini juga include cara install ssh biar debiannya bisa diakses dari terminal / powershell / apalah terserah. Allright simak baik baik dan jangan sampe ada yang kelewatan biar ga eror
@@ -22,7 +26,7 @@ Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara instal
 3. **Konfigurasi Jaringan di VirtualBox**  
    - Tambahkan Host-Only Adapter:  
      - Buka **Network** di VirtualBox.  
-     - Tambahkan **Host-Only Adapter** baru dan konfigurasikan IP sesuai kebutuhan misalnya 192.168.100.1
+     - Tambahkan **Host-Only Adapter** baru dan konfigurasikan IP sesuai kebutuhan misalnya **192.168.100.1**
    - Buka pengaturan VM Debian:  
      - **Adapter 1:** Atur ke **NAT**.  
      - **Adapter 2:** Atur ke **Host-Only Adapter** yang telah ditambahkan sebelumnya.  
@@ -111,6 +115,8 @@ Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara instal
 > - SSH memungkinkan akses jarak jauh ke Debian, jadi pastikan port yang digunakan tidak bertabrakan dengan aplikasi lain.
 > - Karena ini CLI bang [Kepleh]() pasti suka
 
+# Langkah berikutnya
+Jika semua diatas sudah berhasil kini kita beralih ke [Konfigurasi powerdns & admin panel](pdnsinstall.md) klik untuk tutorial lengkapnya
 
 ## Pasreng Team
 - [BagasZkyn/NathanKanaeru]()
