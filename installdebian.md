@@ -1,3 +1,5 @@
+![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
+
 # Install Debian di VirtualBox  
 
 Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara install debian di virtualbox (CLI Only) . ini juga include cara install ssh biar debiannya bisa diakses dari terminal / powershell / apalah terserah. Allright simak baik baik dan jangan sampe ada yang kelewatan biar ga eror
