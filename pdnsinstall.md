@@ -38,10 +38,8 @@ di tutorial sebelumnya saya sudah kasih tau bagaimana cara install openssh kan? 
    mysql_secure_installation
    ```
    Bakalan muncul benerapa pertanyaan:
-   `Enter current password for root`
-   - pada bagian ini langsung enter saja
-   `Set root password?`
-   - klik Y lalu enter dan buat password kamu misal `password`
+   `Enter current password for root` pada bagian ini langsung enter saja
+   `Set root password?` mlik Y lalu enter dan buat password kamu misal `password`
    `Remove anonymous user?` Y
    `Disable root login remotely` Y
    `Remove test database and acces to it` Y
