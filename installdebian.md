@@ -1,6 +1,6 @@
 # Install Debian di VirtualBox  
 
-Panduan langkah demi langkah untuk menginstal Debian di VirtualBox dengan pengaturan jaringan NAT dan Host-Only Adapter.  
+Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara install debian di virtualbox (CLI Only) . ini juga include cara install ssh biar debiannya bisa diakses dari terminal / powershell / apalah terserah. Allright simak baik baik dan jangan sampe ada yang kelewatan biar ga eror
 
 ## Persyaratan  
 1. **VirtualBox**  
@@ -90,6 +90,13 @@ Panduan langkah demi langkah untuk menginstal Debian di VirtualBox dengan pengat
      ```bash
      ping 192.168.100.2
      ```  
+10. **Login dengan SSH**
+    - Masuk ke cmd / powershell dan masukkan perintah ssh berikut untuk login ke debian:
+      ```
+      ssh debian@192.168.100.1 -p 2222
+      ```
+      untuk `debian` adalah username dari debian tadi dan `192.168.100.1` adalah ip dari yang kita set di adapter tadi lalu `2008` adalah port SSH dari debian tadi yang sebelumnya juga udah kita set. sesuaikan saja sama yang kamu set biar tidak ada kendala
+
 
 > [!NOTE]
 > - Pastikan pengaturan jaringan sudah benar agar koneksi antara host dan VM berjalan dengan baik.  
