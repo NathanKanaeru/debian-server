@@ -61,7 +61,7 @@ di tutorial sebelumnya saya sudah kasih tau bagaimana cara install openssh kan? 
    ```
    - set permission database ke user
    ```
-   grant all privileges on pdns.* to pdnsadmin@localhost identified by '123';
+   grant all privileges on pdns.* to pdns@localhost identified by 'passwordmu';
    ```
    - flush privileges dan keluar dari mariadb
    ```
