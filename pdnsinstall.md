@@ -129,7 +129,7 @@ di tutorial sebelumnya saya sudah kasih tau bagaimana cara install openssh kan? 
    - Download & Ekstrak source code poweradmin :
      ```
      wget https://github.com/poweradmin/poweradmin/archive/refs/tags/v3.4.1.tar.gz
-     tar xvzf v3.4.1.tar.gz
+     tar -xvzf v3.4.1.tar.gz
      ```
    - Pindahkan dan berikan permission :
      ```
