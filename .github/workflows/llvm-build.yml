@@ -30,11 +30,7 @@ jobs:
     # 3. Download Android NDK r14b
     - name: Download Android NDK r14b
       run: |
-        mkdir -p $GITHUB_WORKSPACE/android-ndk
-        wget https://dl.google.com/android/repository/android-ndk-r14b-linux-x86_64.zip -O $GITHUB_WORKSPACE/android-ndk.zip
-        unzip $GITHUB_WORKSPACE/android-ndk.zip -d $GITHUB_WORKSPACE/android-ndk
-        mv $GITHUB_WORKSPACE/android-ndk/android-ndk-r14b $GITHUB_WORKSPACE/android-ndk-r14b
-
+        mkdir -p $GITHUB_WORKSPACE/android-ndk-r14b
     # 4. Setup build environment
     - name: Setup Build Environment
       run: |
