@@ -2,7 +2,6 @@ name: Rebuild LLVM Toolchain
 
 on:
   workflow_dispatch:
-
 jobs:
   build-llvm:
     name: Build LLVM Toolchain
@@ -23,41 +22,54 @@ jobs:
           ninja-build \
           clang \
           python3 \
-          make
+          make \
+          unzip \
+          wget
 
-    # 3. Clone LLVM repository dari Android NDK
-    - name: Clone LLVM Repository
+    # 3. Download Android NDK r14b
+    - name: Download Android NDK r14b
       run: |
-        git clone https://android.googlesource.com/toolchain/llvm llvm-ndk
-        cd llvm-ndk
-        git checkout ndk-r14
+        mkdir -p $GITHUB_WORKSPACE/android-ndk
+        wget https://dl.google.com/android/repository/android-ndk-r14b-linux-x86_64.zip -O $GITHUB_WORKSPACE/android-ndk.zip
+        unzip $GITHUB_WORKSPACE/android-ndk.zip -d $GITHUB_WORKSPACE/android-ndk
+        mv $GITHUB_WORKSPACE/android-ndk/android-ndk-r14b $GITHUB_WORKSPACE/android-ndk-r14b
 
-    # 4. Setup build directory
-    - name: Configure Build
+    # 4. Setup build environment
+    - name: Setup Build Environment
       run: |
-        mkdir -p llvm-ndk/build
-        cd llvm-ndk/build
+        mkdir -p $GITHUB_WORKSPACE/llvm-toolchain
+        cd $GITHUB_WORKSPACE/llvm-toolchain
+        repo init -u https://android.googlesource.com/platform/manifest -b master
+        repo sync -c -j$(nproc)
+
+    # 5. Configure and build LLVM
+    - name: Configure and Build LLVM
+      run: |
+        cd $GITHUB_WORKSPACE/llvm-toolchain
+        # Set up environment variables as needed
+        export NDK=$GITHUB_WORKSPACE/android-ndk-r14b
+        export TOOLCHAIN=$NDK/toolchains/llvm/prebuilt/linux-x86_64
+        export TARGET=aarch64-linux-android
+        export API=21
+        export AR=$TOOLCHAIN/bin/$TARGET-ar
+        export AS=$TOOLCHAIN/bin/$TARGET-as
+        export CC=$TOOLCHAIN/bin/$TARGET$API-clang
+        export CXX=$TOOLCHAIN/bin/$TARGET$API-clang++
+        export LD=$TOOLCHAIN/bin/$TARGET-ld
+        export STRIP=$TOOLCHAIN/bin/$TARGET-strip
+        # Configure and build
+        mkdir build
+        cd build
         cmake -G Ninja \
-          -DLLVM_ENABLE_PROJECTS="clang" \
           -DCMAKE_BUILD_TYPE=Release \
           -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/llvm-install \
           ..
-
-    # 5. Build LLVM menggunakan Ninja
-    - name: Build LLVM
-      run: |
-        cd llvm-ndk/build
         ninja
-
-    # 6. Install hasil build
-    - name: Install LLVM
-      run: |
-        cd llvm-ndk/build
         ninja install
 
-    # 7. Upload hasil build sebagai artifact
+    # 6. Upload hasil build sebagai artifact
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
         name: llvm-toolchain
-        path: llvm-install/
+        path: $GITHUB_WORKSPACE/llvm-install/
