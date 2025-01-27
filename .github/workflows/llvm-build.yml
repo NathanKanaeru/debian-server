@@ -1,0 +1,64 @@
+name: Rebuild LLVM Toolchain
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-llvm:
+    name: Build LLVM Toolchain
+    runs-on: ubuntu-24.04-arm
+
+    steps:
+    # 1. Checkout kode repository
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # 2. Install dependencies
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          git \
+          cmake \
+          ninja-build \
+          clang \
+          python2 \
+          python3 \
+          make
+
+    # 3. Clone LLVM repository dari Android NDK
+    - name: Clone LLVM Repository
+      run: |
+        git clone https://android.googlesource.com/toolchain/llvm llvm-ndk
+        cd llvm-ndk
+        git checkout ndk-r14
+
+    # 4. Setup build directory
+    - name: Configure Build
+      run: |
+        mkdir -p llvm-ndk/build
+        cd llvm-ndk/build
+        cmake -G Ninja \
+          -DLLVM_ENABLE_PROJECTS="clang" \
+          -DCMAKE_BUILD_TYPE=Release \
+          -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/llvm-install \
+          ..
+
+    # 5. Build LLVM menggunakan Ninja
+    - name: Build LLVM
+      run: |
+        cd llvm-ndk/build
+        ninja
+
+    # 6. Install hasil build
+    - name: Install LLVM
+      run: |
+        cd llvm-ndk/build
+        ninja install
+
+    # 7. Upload hasil build sebagai artifact
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: llvm-toolchain
+        path: llvm-install/
