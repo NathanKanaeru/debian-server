@@ -24,7 +24,8 @@ jobs:
           python3 \
           make \
           unzip \
-          wget
+          wget \
+          repo
 
     # 3. Download Android NDK r14b
     - name: Download Android NDK r14b
