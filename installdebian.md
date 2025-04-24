@@ -10,7 +10,7 @@ Halo saya NathanKanaeru (bagas aslinya) . ini adalah tutorial gimana cara instal
 
 ## Persyaratan  
 1. **VirtualBox**  
-   - Unduh dan instal VirtualBox dari [situs resmi](https://www.virtualbox.org/). Skip jika udah install
+   - Unduh dan instal VirtualBox dari [situs resmi][https://www.virtualbox.org/](https://download.virtualbox.org/virtualbox/7.0.22/VirtualBox-7.0.22-165102-Win.exe). Skip jika udah install
 2. **Extension Pack**  
    - Unduh dan tambahkan Extension Pack dari [halaman download VirtualBox](https://www.virtualbox.org/wiki/Downloads). Jangan lupa diimport kalo udah didownload
 3. **Debian VM Image**  
